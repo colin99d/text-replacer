@@ -96,7 +96,7 @@ async fn fix_clipboard() -> Result<(), Box<dyn std::error::Error>> {
     let res = client.post("https://api.openai.com/v1/chat/completions")
         .header(AUTHORIZATION, format!("Bearer {}", api_key))
         .json(&json!({
-            "model": "gpt-5.4",
+            "model": "gpt-5.4-mini",
             "messages": [
                 {"role": "system", "content": "You are a direct text-replacement tool for Russian grammar."},
                 {"role": "user", "content": prompt}
