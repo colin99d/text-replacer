@@ -89,7 +89,7 @@ async fn fix_clipboard() -> Result<(), Box<dyn std::error::Error>> {
     // Minimalist prompt for quick, accurate corrections
     let prompt = format!(
         "Correct the following Russian text. Keep it natural and change as little as possible. \
-        Output ONLY the corrected text.\n\n\"{}\"",
+        Output ONLY the corrected text. NEVER ADD QUOTATIONS\n\n\"{}\"",
         text
     );
 
